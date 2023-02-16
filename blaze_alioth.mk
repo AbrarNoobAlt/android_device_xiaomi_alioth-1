@@ -8,13 +8,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common banana stuff.
-$(call inherit-product, vendor/banana/config/common.mk)
+# Inherit some common Blaze stuff.
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 
-#Banana Stuffs
-BANANA_BUILD_TYPE := OFFICIAL
-TARGET_FACE_UNLOCK_SUPPORTED := true
-BANANA_MAINTAINER := Abrar
+#Blaze Stuffs
+BLAZE_BUILD_TYPE := OFFICIAL
+BLAZE_MAINTAINER := 𝗔𝗕𝗥𝗔𝗥
 
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
@@ -32,11 +31,6 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 # Boot resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-#SuperiorOS Stuff
-SUPERIOR_OFFICIAL := true
-BUILD_WITH_GAPPS := true
-USE_QUICKPIC := true
-TARGET_GAPPS_ARCH := arm64
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
